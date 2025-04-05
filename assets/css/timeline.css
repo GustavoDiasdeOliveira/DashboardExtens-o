@@ -1,0 +1,84 @@
+.container .right main .timeline {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    background: #22223be6;
+    box-shadow: 10px 10px 30px rgba(34, 34, 59, 0.5), 
+    inset -8px -8px 16px 0px rgba(34, 34, 59, 0.6), 
+    inset 0px 11px 28px 0px rgba(34, 34, 59, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 4 / 7;
+    grid-column: 2 / 3;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.container .right main .timeline .timelineHead {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline .weatherInfo {
+    margin-top: 5px;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline .mainWeather {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #4a4e69;
+    border-radius: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.timeline .mainWeather h3 {
+    font-size: 2em;
+
+}
+
+.timeline .mainWeather p {
+    margin: 2px 0;
+    font-size: 0.9em;
+}
+
+.timeline .mainWeather .hora {
+    font-size: 0.8em;
+    color: #ccc;
+}
+
+.timeline .weatherIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.timeline .weatherStats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.timeline .statBox {
+    background: #2c2c54;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+}

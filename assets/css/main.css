@@ -1,0 +1,171 @@
+.container .right main {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 90px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+
+
+/* Responsive Main */
+@media (max-width: 1176px) {
+    .container .right {
+        zoom: 85%;
+    }
+
+    .container .left {
+        zoom: 100%;
+        position: absolute;
+        right: -300px;
+        height: calc(100% - 6.3vh);
+        z-index: 11;
+        box-shadow: none;
+        transition: .5s ease;
+    }
+
+    .container .left.active {
+        right: 20px;
+    }
+
+    .container .right.overlay::before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.863);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        border-radius: 30px 20px 20px 30px;
+    }
+
+    .container .right .top .user .toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 927px) {
+    .container {
+        height: 100%;
+        margin: 30px 0;
+    }
+
+    .container .left.active {
+        width: calc(100% - 40px);
+        height: calc(100vh - 55px);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .container .left header .logo .close {
+        display: block;
+    }
+
+    .container .right main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1.4fr 1.4fr 1.6fr 1.3fr 1fr 1.3fr;
+    }
+
+    .container .right main * {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+
+    .container .right .top .searchBx h2 {
+        font-size: 1.2em;
+    }
+
+    .container .right .top .searchBx .inputBx {
+        width: 45px;
+        cursor: pointer;
+    }
+
+
+    .container .right .top .searchBx.active {
+        position: absolute;
+        width: calc(100% - 40px);
+        height: 45px;
+        background: #f8f2fe;
+        z-index: 10;
+        border-radius: 10px;
+    }
+
+    .container .right .top .searchBx.active h2 {
+        display: none;
+    }
+
+    .container .right .top .searchBx.active .inputBx {
+        width: 100%;
+    }
+
+    .container .right .top .searchBx.active .inputBx input {
+        padding-right: 40px;
+    }
+
+    .container .right .top .searchBx.active .inputBx span.searchClose {
+        display: block;
+    }
+
+    .container .right .top .user {
+        gap: 10px;
+    }
+
+    .timeline .mainWeather {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: #4a4e69;
+        border-radius: 15px;
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .timeline .mainWeather h3 {
+        font-size: 2em;
+        margin: 0;
+    }
+    
+    .timeline .mainWeather p {
+        margin: 2px 0;
+        font-size: 0.9em;
+    }
+    
+    .timeline .mainWeather .hora {
+        font-size: 0.8em;
+        color: #ccc;
+    }
+    
+    .timeline .weatherIcon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .timeline .weatherStats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .timeline .statBox {
+        background: #2c2c54;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #fff;
+    }  
+}
+
+
+@media (max-width: 586px) {
+    .container .right .top .user .arrow {
+        display: none;
+    }
+
+    .container .right .top .user h2 {
+        display: none;
+    }
+}

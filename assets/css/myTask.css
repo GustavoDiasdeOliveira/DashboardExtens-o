@@ -1,0 +1,153 @@
+/* myTask */
+
+.container .right main .myTasks {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background: #22223be6;
+    box-shadow: 10px 10px 30px rgba(34, 34, 59, 0.5), 
+    inset -8px -8px 16px 0px rgba(34, 34, 59, 0.6), 
+    inset 0px 11px 28px 0px rgba(34, 34, 59, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+}
+
+.container .right main .myTasks .tasksHead {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .right main .myTasks .tasksHead h2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 18px;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasksHead .tasksDots {
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasksHead .tasksDots span {
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.container .right main .myTasks .tasks {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .right main .myTasks .tasks ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .right main .myTasks .tasks ul li {
+    position: relative;
+    width: 100%;
+    height: calc(100% / 7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right main .myTasks .tasks ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.container .right main .myTasks .tasks ul li:last::before {
+    width: 0;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon.done {
+    color: #ffffff;
+    background: #059669;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon.notDone {
+    background: #fff;
+    border: 3px solid #999;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .taskName {
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksName.tasksLine {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksName.tasksLine::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #999;
+}
+
+.container .right main .myTasks .tasks ul li .tasksStar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.container .right main .myTasks .tasks ul li .tasksStar.full {
+    color: #f5c75f;
+}
+
+.container .right main .myTasks .tasks ul li .tasksStar.half {
+    color: #f5c75f;
+}

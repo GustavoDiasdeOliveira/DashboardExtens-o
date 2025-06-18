@@ -47,7 +47,7 @@
                 <nav>
                     <ul>
                         <!-- 1° Item - Dashboard -->
-                        <li class="list">
+                        <li>
                             <a href="index.html">
                                 <span class="material-symbols-outlined full">
                                     dashboard
@@ -57,7 +57,7 @@
                         </li>
 
                         <!-- 2° Item - Pacientes -->
-                        <li class="list">
+                        <li>
                             <a href="#">
                                 <span class="material-symbols-outlined">
                                     group
@@ -67,7 +67,7 @@
                         </li>
 
                         <!-- 3° Item - Tarefas -->
-                        <li class="list">
+                        <li>
                             <a href="#">
                                 <span class="material-symbols-outlined">
                                     check_box
@@ -76,8 +76,18 @@
                             </a>
                         </li>
 
-                        <!-- 4° Item - Mensagens -->
-                        <li class="list">
+                        <!-- 4° Item - Timeline -->
+                        <li>
+                            <a href="#">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                <span class="title">Timeline</span>
+                            </a>
+                        </li>
+
+                        <!-- 5° Item - Mensagens -->
+                        <li>
                             <a href="#">
                                 <span class="material-symbols-outlined">
                                     chat_bubble
@@ -86,8 +96,8 @@
                             </a>
                         </li>
 
-                        <!-- 5° Item - Configurações -->
-                        <li class="list">
+                        <!-- 6° Item - Configurações -->
+                        <li>
                             <a href="#">
                                 <span class="material-symbols-outlined">
                                     settings
@@ -372,61 +382,49 @@
                                     <i class='bx bx-star'></i>
                                 </span><!-- Fim da span taskStar -->
                             </li>
-
-                            <!-- 8 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 8</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 9 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 9</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 10 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 10</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 11 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 11</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
                         </ul>
                     </div><!-- Fim da div tasks -->
                 </div><!-- Fim da div myTasks -->
                 <!-- ============= Fim Project Tasks ============= -->
 
                 <!-- ============= Project timeline ============= -->
-                
+                <div class="timeline">
+                    <div class="timelineHead">
+                        <h2>Praia Grande, BR</h2>
+                        <span id="clock">--:--:--</span>
+                    </div>
+
+                    <div class="weatherInfo">
+                        <div class="mainWeather">
+                            <img id="weather-icon" src="icone-chuva.png" alt="Ícone do clima" class="weatherIcon">
+                            <div id="temp_desc">
+                                <h3 id="temperature">-- °C</h3>
+                                <p id="description">--</p>
+                            </div>
+                        </div>
+
+                        <div class="weatherStats">
+                            <div class="statBox">
+                                <p> 🥵  Temp. max</p>
+                                <p id="temp-max">-- °C</p>
+                            </div>
+                            <div class="statBox">
+                                <p> 🥶  Temp. min</p>
+                                <p id="temp-min">-- °C</p>
+                            </div>
+                            <div class="statBox">
+                                <p>💧 Umidade</p>
+                                <p id="humidity">--%</p>
+                            </div>
+                            <div class="statBox">
+                                <p>🌬️ Vento</p>
+                                <p id="wind">-- km/h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- ============= Fim Project timeline ============= -->
 
                 <!-- ============= Project Calendar ============= -->
@@ -546,33 +544,64 @@
 
 
     <!-- ============= Javascript ============= -->
-
-    <script>
-        function atualizarTempo() {
-            const hora = document.getElementById('hora');
-            const temp = document.getElementById('temp');
-        
-            // Hora
-            const agora = new Date();
-            hora.textContent = agora.toLocaleTimeString('pt-BR');
-        
-            // Clima - Praia Grande
-            fetch('https://api.open-meteo.com/v1/forecast?latitude=-24.0058&longitude=-46.402&current_weather=true')
-                .then(res => res.json())
-                .then(data => {
-                    temp.textContent = `${data.current_weather.temperature}°C`;
-                })
-                .catch(() => {
-                    temp.textContent = "Erro";
-                });
-        }
-        
-        atualizarTempo();
-        setInterval(atualizarTempo, 1000); // Atualiza hora a cada segundo
-    </script>
-    
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/calendario.js"></script>
+
+    <script>
+    const apiKey = '10e3c9a532e1770bda9e949349247ce4';
+    const city = 'Praia Grande';
+    const country = 'BR';
+
+    function updateClock() {
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('pt-BR', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+        document.getElementById('clock').innerText = timeStr;
+    }
+
+    async function fetchWeather() {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=pt_br&appid=${apiKey}`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            document.getElementById('temperature').innerText = `${data.main.temp.toFixed(1)} °C`;
+            document.getElementById('temp-max').innerText = `${data.main.temp_max.toFixed(1)} °C`;
+            document.getElementById('temp-min').innerText = `${data.main.temp_min.toFixed(1)} °C`;
+            document.getElementById('humidity').innerText = `${data.main.humidity}%`;
+            document.getElementById('wind').innerText = `${(data.wind.speed * 3.6).toFixed(2)} km/h`;
+            document.getElementById('description').innerText = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1);
+
+            const iconCode = data.weather[0].icon;
+            document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+            const now = new Date();
+            document.getElementById('weather-time').innerText = now.toLocaleTimeString('pt-BR', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+        } catch (error) {
+            console.error('Erro ao buscar dados do clima:', error);
+        }
+    }
+
+    // Atualiza relógio a cada segundo
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Atualiza clima imediatamente e a cada 30 segundos (real-time feeling)
+    fetchWeather();
+    setInterval(fetchWeather, 30000);
+</script>
+
+
+
+
 </body>
 
 </html>

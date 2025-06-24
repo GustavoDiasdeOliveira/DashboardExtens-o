@@ -14,7 +14,6 @@
     align-items: center;
     flex-direction: column;
     grid-row: 1 / 4;
-    grid-column: 3 / 4;
     padding: 20px;
     gap: 10px;
 }

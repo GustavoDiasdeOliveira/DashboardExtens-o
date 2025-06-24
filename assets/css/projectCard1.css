@@ -27,14 +27,14 @@
 
 .container .right main .projectCard .projectTop h2 {
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 1.0rem;
     line-height: 18px;
     cursor: pointer;
 }
 
 .container .right main .projectCard .projectTop h2 span {
     color: #f1a8a8;
-    font-size: 00.8em;
+    font-size: 10px;
 }
 
 .container .right main .projectCard .projectTop .projectsDots {
@@ -104,61 +104,32 @@
     font-weight: 500;
 }
 
-.container .right main .projectCard .groupImg {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.projectCard .projectInfo {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.container .right main .projectCard .groupImg::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    align-items: center;  /* Centraliza verticalmente */
+    justify-content: flex-start;  /* Alinha no início (lado esquerdo) */
+    gap: 20px;  /* Espaço entre a imagem e o texto */
     width: 100%;
-    height: 1.5px;
-    background: rgba(255, 255, 255, 0.1);
 }
 
-.container .right main .projectCard .groupImg a {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
+.projectCard .projectInfo img {
+    width: 80px;  /* Tamanho ajustado da foto */
+    height: 80px;
     border-radius: 50%;
-    left: var(--left);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #fff;
-    transition: .5s ease;
-}
-
-.container .right main .projectCard .groupImg a:hover {
-    transform: scale(1.10);
-}
-
-.container .right main .projectCard .groupImg a img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-.container .right main .projectCard .groupImg a:last-child {
-    border: 2px solid #ffffff;
-    background: #fff;
+.projectCard .details h2 {
+    color: #fff;
+    font-size: 2em;  /* Maior destaque no nome */
+    margin: 0;
 }
 
-.container .right main .projectCard .groupImg a:last-child .number {
-    color: #000;
-    font-size: 1.2em;
+.projectCard .details p {
+    color: #ccc;
+    font-size: 1.3em;
+    margin: 1px 0;
+    line-height: 1.3;
 }
 
 .container .right main .projectCard .task {
@@ -201,20 +172,3 @@
     z-index: 1;
 }
 
-.container .right main .projectCard .due {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-}
-
-.container .right main .projectCard .due h2 {
-    padding: 0px 10px;
-    border: 2px solid #f5b5f5;
-    border-radius: 5px;
-    font-size: 1.1em;
-    color: #f5b5f5;
-}

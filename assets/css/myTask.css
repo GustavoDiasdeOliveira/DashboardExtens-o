@@ -15,8 +15,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    grid-row: 1 / 7;
-    grid-column: 2 / 3;
+    grid-row: 4 / 7;
 }
 
 .container .right main .myTasks .tasksHead {
@@ -64,7 +63,7 @@
 .container .right main .myTasks .tasks ul li {
     position: relative;
     width: 100%;
-    height: calc(100% / 11);
+    height: calc(100% / 6);
     display: flex;
     justify-content: space-between;
     align-items: center;

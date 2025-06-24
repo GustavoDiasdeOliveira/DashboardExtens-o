@@ -1,4 +1,4 @@
-.container .right main .messages {
+.container .right main .medicaments {
     position: relative;
     width: 100%;
     height: 100%;
@@ -17,13 +17,14 @@
     gap: 5px;
 }
 
-.container .right main .messages .messagesHead {
+.container .right main .medicaments .medicamentsHead {
     position: relative;
     width: 100%;
     height: 30px;
+    display: flex;
 }
 
-.container .right main .messages .messagesHead h2 {
+.container .right main .medicaments .medicamentsHead h2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -33,7 +34,21 @@
     cursor: pointer;
 }
 
-.container .right main .messages .messagesUser {
+.container .right main .medicaments .medicamentsDots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .medicaments .medicamentsDots span {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.container .right main .medicaments .medicamentsUser {
     position: relative;
     width: 100%;
     height: 100%;
@@ -43,7 +58,7 @@
     gap: 20px;
 }
 
-.container .right main .messages .messagesUser .messagesUserImg {
+.container .right main .medicaments .medicamentsUser .medicamentsUserImg {
     position: relative;
     width: 40px;
     height: 40px;
@@ -51,7 +66,7 @@
     overflow: hidden;
 }
 
-.container .right main .messages .messagesUser .messagesUserImg img {
+.container .right main .medicaments .medicamentsUser .medicamentsUserImg img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,7 +74,7 @@
     cursor: pointer;
 }
 
-.container .right main .messages .messagesUser h2 {
+.container .right main .medicaments .medicamentsUser h2 {
     position: relative;
     color: #fff;
     cursor: pointer;
@@ -67,7 +82,38 @@
     line-height: 18px;
 }
 
-.container .right main .messages .messagesUser h2 span {
+.container .right main .medicaments .medicamentsUser h2 span {
     color: #f1a8a8;
     font-size: 0.6em;
 }
+
+.container .right main .medicaments .medicamentsUser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .right main .medicaments .medicamentsUserInfo {
+    flex-grow: 1;
+}
+
+.container .right main .medicaments .medicamentsUserCity {
+    text-align: right;
+    font-size: 1em;
+    color: #ccc;
+}
+
+.container .right main .medicaments .medicamentsUserInfo h2 {
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+}
+
+.container .right main .medicaments .medicamentsUserInfo .priority{
+    font-size: 0.8em;
+    color: #f1a8a8;
+}
+

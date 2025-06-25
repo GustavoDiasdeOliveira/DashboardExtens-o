@@ -49,6 +49,20 @@
         margin: 30px 0;
     }
 
+    .container .left {
+        zoom: 100%;
+        position: absolute;
+        right: -300px;
+        height: calc(100% - 6.3vh);
+        z-index: 11;
+        box-shadow: none;
+        transition: .5s ease;
+    }
+
+    .container .left.active {
+        right: 20px;
+    }
+
     .container .left.active {
         width: calc(100% - 40px);
         height: calc(100vh - 55px);
@@ -126,12 +140,12 @@
         width: 100%;
         height: auto;
         margin: 0;
-        padding: 0 10px;
+        padding: 0px 10px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    
     .container .right {
         padding-top: 10px; /* espaço para o topo com ícones */
         zoom: 100%;
@@ -154,7 +168,7 @@
         width: 100%;
         height: 100vh;
         top: 0;
-        left: 0;
+        right: 0;
         background: #1a1a2e;
         z-index: 999;
         padding: 20px;

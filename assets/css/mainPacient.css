@@ -207,3 +207,49 @@
         display: none;
     }
 }
+
+@media (max-width: 430px) {
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .right {
+        padding-top: 10px; /* espaço para o topo com ícones */
+        zoom: 100%;
+        width: 100%;
+    }
+
+    .container .right .top .user {
+        gap: 10px;
+    }
+
+    .container .right main {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container .left.active {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #1a1a2e;
+        z-index: 999;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .container .left header .logo .close {
+        display: block;
+    }
+}
+

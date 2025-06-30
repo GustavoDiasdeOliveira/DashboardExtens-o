@@ -215,50 +215,6 @@
         display: block;
     }
 
-    .charts-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .chart-task-row {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .legend-right {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .donut-chart {
-        width: 100px;
-        height: 100px;
-    }
-
-    .chart-label {
-        font-size: 15px;
-    }
-
-    .pie-legend-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .pie-legend-wrapper canvas {
-        max-width: 150px;
-        max-height: 150px;
-    }
-
-    .legend-labels {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    .chart-task-tracker canvas,
-    .health-chart-wrapper {
-        height: 150px !important;
-    }
 }
 
 @media (max-width: 927px) {
@@ -326,6 +282,51 @@
 
     .container .right .top .user {
         gap: 10px;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .chart-task-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .legend-right {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .donut-chart {
+        width: 100px;
+        height: 100px;
+    }
+
+    .chart-label {
+        font-size: 15px;
+    }
+
+    .pie-legend-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pie-legend-wrapper canvas {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .legend-labels {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .chart-task-tracker canvas,
+    .health-chart-wrapper {
+        height: 150px !important;
     }
 }
 
@@ -400,7 +401,7 @@
         width: 100%;
         height: 100vh;
         top: 0;
-        left: 0;
+        right: 0;
         background: #1a1a2e;
         z-index: 999;
         padding: 20px;

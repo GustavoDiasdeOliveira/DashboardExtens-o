@@ -211,106 +211,28 @@
                 </div><!-- Fim da div ProjectCard -->
                 <!-- ============= Fim Project Card1 ============= -->
 
-                <!-- ============= Project Tasks ============= -->
                 <div class="myTasks">
                     <div class="tasksHead">
                         <h2>Painel de Tarefas</h2>
                         <div class="tasksDots">
-                            <span class="material-symbols-outlined">
-                                more_horiz
-                            </span>
-                        </div><!-- Fim da div tasksDots -->
-                    </div><!-- Fim da div tasksHead -->
-                    <div class="tasks">
-                        <ul>
-                            <!-- 1 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon done">
-                                        <span class="material-symbols-outlined">
-                                            check
-                                        </span>
-                                    </span><!-- Fim da span tasksIcon -->
-                                    <span class="taskName">My Task 1</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
+                            <span id="addTaskBtn" title="Adicionar tarefa" class="material-symbols-outlined" style="cursor: pointer;">add</span>
+                        </div>
+                    </div>
 
-                                <span class="tasksStar full">
-                                    <i class='bx bxs-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
+                    <div class="tasks" id="tasks">
+                        <!-- Mensagem padrão caso nenhuma tarefa exista -->
+                        <div class="noTasksMessage" id="noTasksMessage">
+                            <span class="material-symbols-outlined">task_alt</span>
+                            <p>Nenhuma tarefa cadastrada</p>
+                            <small>Clique no + para adicionar uma tarefa</small>
+                        </div>
 
-                            <!-- 2 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 2</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 3 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 3</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 4 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon done">
-                                        <span class="material-symbols-outlined">
-                                            check
-                                        </span>
-                                    </span><!-- Fim da span tasksIcon -->
-                                    <span class="tasksName tasksLine">My Task 4</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar half">
-                                    <i class='bx bx-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 5 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon done">
-                                        <span class="material-symbols-outlined">
-                                            check
-                                        </span>
-                                    </span><!-- Fim da span tasksIcon -->
-                                    <span class="tasksName tasksLine">My Task 5</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar full">
-                                    <i class='bx bxs-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
-
-                            <!-- 6 º item -->
-                            <li>
-                                <span class="tasksIconName">
-                                    <span class="tasksIcon notDone"></span>
-                                    <span class="taskName">My Task 6</span><!-- Fim da div taskName -->
-                                </span><!-- Fim da span tasksIconName -->
-
-                                <span class="tasksStar full">
-                                    <i class='bx bxs-star'></i>
-                                </span><!-- Fim da span taskStar -->
-                            </li>
+                        <!-- Lista de tarefas dinâmica -->
+                        <ul id="taskList" style="display: none;"></ul>
+                    </div>
+                </div>
 
 
-                        </ul>
-                    </div><!-- Fim da div tasks -->
-                </div><!-- Fim da div myTasks -->
                 <!-- ============= Fim Project Tasks ============= -->
 
                 <!-- ============= Project Calendar ============= -->
@@ -452,32 +374,48 @@
     </div><!-- Fim da div container -->
 
 
+
+    <!-- Configurações dos CRUDS -->
+
+    <!-- 1° crud taskmodal-->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Adicionar Tarefa</h2>
+                <span class="closeBtn" onclick="fecharModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <label for="taskName">Nome da Tarefa:</label>
+                <input type="text" id="taskName">
+
+                <label for="taskPriority">Prioridade (Estrelas):</label>
+                <select id="taskPriority" style="color: gold;">
+                    <option value="1">★☆☆☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="5">★★★★★</option>
+                </select>
+
+                <label style="display: none;"><input type="checkbox" id="taskDone"> Tarefa concluída</label>
+            </div>
+            <div class="modal-footer">
+                <button onclick="fecharModal()">Cancelar</button>
+                <button onclick="salvarTarefa()" class="btnSalvar">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2° crud medicamentos-->
+
+
+    
+
+    <!-- Javascript CRUD-->
+    <script src="assets/js/crud-task.js"></script>
+    <script src="assets/js/crud-medicamentos.js"></script>
     <!-- ============= Javascript ============= -->
-
-    <script>
-        function atualizarTempo() {
-            const hora = document.getElementById('hora');
-            const temp = document.getElementById('temp');
-
-            // Hora
-            const agora = new Date();
-            hora.textContent = agora.toLocaleTimeString('pt-BR');
-
-            // Clima - Praia Grande
-            fetch('https://api.open-meteo.com/v1/forecast?latitude=-24.0058&longitude=-46.402&current_weather=true')
-                .then(res => res.json())
-                .then(data => {
-                    temp.textContent = `${data.current_weather.temperature}°C`;
-                })
-                .catch(() => {
-                    temp.textContent = "Erro";
-                });
-        }
-
-        atualizarTempo();
-        setInterval(atualizarTempo, 1000); // Atualiza hora a cada segundo
-    </script>
-
+    <script src="assets/js/time.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/calendario.js"></script>
 </body>

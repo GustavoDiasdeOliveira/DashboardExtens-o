@@ -10,10 +10,6 @@
 
 /* Responsive Main */
 @media (max-width: 1176px) {
-    .container .right {
-        zoom: 85%;
-    }
-
     .container .left {
         zoom: 100%;
         position: absolute;
@@ -45,8 +41,8 @@
 
 @media (max-width: 927px) {
     .container {
-        height: 80%;
-        margin: 30px 0;
+        height: 100%;
+        /* margin: 30px 0; */
     }
 
     .container .left {

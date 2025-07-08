@@ -1,3 +1,60 @@
+/* =============== Carregamento de página =============== */
+.hidden {
+  display: none !important;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+  background: #1717173d;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader div {
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0 -0.4rem rgba(0, 0, 0, 0.1) inset;
+  animation: cycle 1s ease-in-out infinite;
+}
+
+.loader div:nth-child(1) {
+  animation-delay: 0;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes cycle {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =============== fim carregamento de página =============== */
+
 .container .right main {
     position: relative;
     width: 100%;
@@ -12,10 +69,10 @@
     height: 100%;
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    background: #22223be6;
-    box-shadow: 10px 10px 30px rgba(34, 34, 59, 0.5), 
-    inset -8px -8px 16px 0px rgba(34, 34, 59, 0.6), 
-    inset 0px 11px 28px 0px rgba(34, 34, 59, 0.8);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 35px 35px 68px 0px rgba(255, 255, 255, .5),
+        inset -8px -8px 16px 0px rgba(255, 255, 255, .6),
+        inset 0px 11px 28px 0px rgba(255, 255, 255);
     padding: 20px;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +80,7 @@
 
 #titleDesempenho {
     margin-top: -15px;
-    color: #f8f2fe;
+    color: #000000;
 }
 
 .charts-grid {
@@ -35,18 +92,19 @@
 
 /* Card individual */
 .chart-box {
-  background: #1f1f3b;
+  background: #fff;
+  border: 1px solid #00000033;
   border-radius: 15px;
   max-height: 240px; /* altura fixa para todos os cards */
   overflow: hidden;
   padding: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 10px 10px 30px rgba(34, 34, 59, 0.5),
-              inset -5px -5px 15px rgba(34, 34, 59, 0.4),
-              inset 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 35px 35px 68px 0px rgba(184, 184, 184, 0.301),
+        inset -8px -8px 16px 0px rgba(202, 202, 202, 0.6),
+        inset 0px 5px 20px 0px rgb(216, 214, 214);
 }
 
 /* CARD 1 */
@@ -75,13 +133,13 @@
   text-align: center;
   font-weight: bold;
   font-size: 17px;
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 1.2;
 }
 
 .legend-right {
   font-size: 1.5rem;
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 1.6;
 }
 
@@ -105,7 +163,7 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* CARD 3 */ 
@@ -133,7 +191,7 @@
   padding-right: 6px;
 
   scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #fff transparent; /* polegar visível, fundo transparente */
+  scrollbar-color: #e891d3 transparent; /* polegar visível, fundo transparente */
 }
 
 .pie-legend-wrapper::-webkit-scrollbar {
@@ -147,7 +205,7 @@
 .pie-legend-wrapper::-webkit-scrollbar-thumb {
   background: linear-gradient(#906dd1, #3a3d6e);
   border-radius: 10px;
-  border: 3px solid #fff;
+  border: 3px solid #000000;
 }
 
 
@@ -177,7 +235,7 @@
   margin-right: 10px;
   vertical-align: middle;
   border-radius: 4px;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
 }
 
 
@@ -215,6 +273,10 @@
         display: block;
     }
 
+    .container .left header .logo .close {
+        display: block;
+    }
+
 }
 
 @media (max-width: 927px) {
@@ -228,10 +290,6 @@
         height: calc(100vh - 55px);
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-    }
-
-    .container .left header .logo .close {
-        display: block;
     }
 
     .container .right main {
@@ -402,7 +460,6 @@
         height: 100vh;
         top: 0;
         right: 0;
-        background: #1a1a2e;
         z-index: 999;
         padding: 20px;
         overflow-y: auto;

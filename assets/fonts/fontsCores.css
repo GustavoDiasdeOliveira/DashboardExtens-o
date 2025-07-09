@@ -54,7 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #efc7fa;
+    background: linear-gradient(#f4dbfb, #d8dbfe);
     font-size: 14px;
 }
 

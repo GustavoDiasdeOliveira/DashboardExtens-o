@@ -174,17 +174,98 @@
             <!-- ============= Project Main ============= -->
             <main>
                 <div class="projectCard">
-                    
+                    <!-- Task History Container -->
+                    <div class="task-history-container">
+                        <!-- Header com Stats -->
+                        <div class="task-header">
+                            <div class="header-title">
+                                <span class="material-symbols-outlined header-icon">
+                                    history
+                                </span>
+                                <h1>Histórico de Tarefas</h1>
+                            </div>
 
-                </div><!-- Fim da div ProjectCard -->
+                            <!-- Stats Cards -->
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number" id="totalTasks">0</div>
+                                    <div class="stat-label">Total</div>
+                                </div>
+                                <div class="stat-card completed">
+                                    <div class="stat-number" id="completedTasks">0</div>
+                                    <div class="stat-label">Concluídas</div>
+                                </div>
+                                <div class="stat-card pending">
+                                    <div class="stat-number" id="pendingTasks">0</div>
+                                    <div class="stat-label">Pendentes</div>
+                                </div>
+                                <div class="stat-card percentage">
+                                    <div class="stat-number" id="completionRate">0%</div>
+                                    <div class="stat-label">Taxa de Conclusão</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filters -->
+                        <div class="filters-container">
+                            <div class="filter-group">
+                                <label>Período:</label>
+                                <div class="period-buttons">
+                                    <button class="period-btn active" data-period="day">Dia</button>
+                                    <button class="period-btn" data-period="month">Mês</button>
+                                    <button class="period-btn" data-period="year">Ano</button>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Data:</label>
+                                <input type="date" id="dateFilter" class="date-input">
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Status:</label>
+                                <select id="statusFilter" class="status-select">
+                                    <option value="all" style="color: #000;">Todas</option>
+                                    <option value="completed" style="color: #000;">Concluídas</option>
+                                    <option value="pending" style="color: #000;">Pendentes</option>
+                                </select>
+                            </div>
+
+                            <div class="search-group">
+                                <label>Buscar:</label>
+                                <div class="search-input-container">
+                                    <span class="material-symbols-outlined search-icon">
+                                        search
+                                    </span>
+                                    <input type="text" placeholder="Buscar tarefas..." id="searchInput" class="search-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tasks List -->
+                        <div class="tasks-container">
+                            <div class="tasks-grid" id="tasksGrid">
+                                <!-- Tasks will be populated by JavaScript -->
+                            </div>
+                            
+                            <!-- Empty State -->
+                            <div class="empty-state" id="emptyState" style="display: none;">
+                                <span class="material-symbols-outlined empty-icon">
+                                    schedule
+                                </span>
+                                <h3>Nenhuma tarefa encontrada</h3>
+                                <p>Não há tarefas para o período selecionado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div><!-- Fim da div right-->
     </div><!-- Fim da div container -->
 
     <script src="assets/js/menu.js"></script>
-    
-    <!-- carregar web -->
     <script src="assets/js/carregarWeb.js"></script>
+    <script src="assets/js/taskHistory.js"></script>
 </body>
 
 </html>

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/main/main.css">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-width.0">
     <title>Responsive Task Dashboard</title>
 </head>
 
@@ -130,8 +130,6 @@
                 </ul>
             </div> <!-- Fim da div logout-->
         </div><!--left-->
-        <!-- ============= Fim Container Left ============= -->
-
         <!-- ====================== Right ====================== -->
         <div class="right">
             <!-- ============= Container Right ============= -->
@@ -217,7 +215,8 @@
                     <div class="tasksHead">
                         <h2>Painel de Tarefas</h2>
                         <div class="tasksDots">
-                            <span id="addTaskBtn" title="Adicionar tarefa" class="material-symbols-outlined" style="cursor: pointer;">add</span>
+                            <span id="addTaskBtn" title="Adicionar tarefa" class="material-symbols-outlined"
+                                style="cursor: pointer;">add</span>
                         </div>
                     </div>
 
@@ -306,76 +305,26 @@
                     <div class="medicamentsHead">
                         <h2>Lista dos medicamentos de hoje</h2>
                         <div class="medicamentsDots">
-                            <span class="material-symbols-outlined">add</span>
+                            <span id="addMedicamentBtn" title="Adicionar medicamento" class="material-symbols-outlined"
+                                style="cursor: pointer;">add</span>
                         </div>
                     </div><!-- Fim da div medicamentsHead -->
 
-                    <!-- 1° Medicamento -->
-                    <div class="medicamentsUser">
-                        <div class="medicamentsUserImg">
-                            <img src="src/images/Logo-Photoroom.jpg" alt="Pill">
+                    <div class="medicamentsContent" id="medicamentsContent">
+                        <!-- Mensagem padrão caso nenhum medicamento exista -->
+                        <div class="noMedicamentsMessage" id="noMedicamentsMessage">
+                            <span class="material-symbols-outlined">medication</span>
+                            <p>Nenhum medicamento cadastrado</p>
+                            <small>Clique no + para adicionar um medicamento</small>
                         </div>
-                        <div class="medicamentsUserInfo">
-                            <h2>Lisinopril</h2>
-                            <span class="priority">10 mg</span>
-                        </div>
-                        <div class="medicamentsUserCity">
-                            <span>08:00</span><br>
-                            <span>AM</span>
-                        </div>
-                    </div><!-- Fim 1 ° Medicamento -->
-
-                    <!-- 2° Medicamento -->
-                    <div class="medicamentsUser">
-                        <div class="medicamentsUserImg">
-                            <img src="src/images/Logo-Photoroom.jpg" alt="Pill">
-                        </div>
-                        <div class="medicamentsUserInfo">
-                            <h2>Atorvastatin</h2>
-                            <span class="priority">20 mg</span>
-                        </div>
-                        <div class="medicamentsUserCity">
-                            <span>12:00</span><br>
-                            <span>PM</span>
-                        </div>
-                    </div><!-- Fim 2° Medicamento -->
-
-                    <!-- 3° Medicamento -->
-                    <div class="medicamentsUser">
-                        <div class="medicamentsUserImg">
-                            <img src="src/images/Logo-Photoroom.jpg" alt="Pill">
-                        </div>
-                        <div class="medicamentsUserInfo">
-                            <h2>Levothyroxine</h2>
-                            <span class="priority">75 mcg</span>
-                        </div>
-                        <div class="medicamentsUserCity">
-                            <span>17:00</span><br>
-                            <span>PM</span>
-                        </div>
-                    </div><!-- Fim 3° Medicamento -->
-
-                    <!-- 4° Medicamento -->
-                    <div class="medicamentsUser">
-                        <div class="medicamentsUserImg">
-                            <img src="src/images/Logo-Photoroom.jpg" alt="Pill">
-                        </div>
-                        <div class="medicamentsUserInfo">
-                            <h2>Omeprazol</h2>
-                            <span class="priority">40 mg</span>
-                        </div>
-                        <div class="medicamentsUserCity">
-                            <span>20:00</span><br>
-                            <span>PM</span>
-                        </div>
-                    </div><!-- Fim 4° Medicamento-->
+                        <!-- Lista de medicamentos dinâmica -->
+                        <ul id="medicamentList" style="display: none;"></ul>
+                    </div>
                 </div><!-- .medicaments -->
 
             </main>
         </div><!-- Fim da div right-->
     </div><!-- Fim da div container -->
-
-
 
     <!-- Configurações dos CRUDS -->
 
@@ -408,10 +357,31 @@
         </div>
     </div>
 
+
     <!-- 2° crud medicamentos-->
+    <div class="modal" id="medicamentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Adicionar Medicamento</h2>
+                <span class="closeBtn" onclick="closeMedicamentModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <label for="medicamentName">Nome do Medicamento:</label>
+                <input type="text" id="medicamentName">
 
+                <label for="medicamentDosage">Dosagem (ex: 10 mg, 75 mcg):</label>
+                <input type="text" id="medicamentDosage">
 
-    
+                <label for="medicamentTime">Horário:</label>
+                <input type="time" id="medicamentTime">
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeMedicamentModal()">Cancelar</button>
+                <button onclick="saveMedicament()" class="btnSalvar">Salvar</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Javascript CRUD-->
     <script src="assets/js/crud-task.js"></script>

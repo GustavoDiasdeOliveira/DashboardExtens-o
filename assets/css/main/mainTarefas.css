@@ -54,6 +54,21 @@
 }
 
 /* =============== fim carregamento de página =============== */
+.container {
+    position: relative;
+    width: 98%;
+    height: 100%;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 5px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1),
+        0 0 10px rgba(0, 0, 0, .2),
+        0 0 15px rgba(0, 0, 0, .2);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
 
 .container .right main {
     position: relative;

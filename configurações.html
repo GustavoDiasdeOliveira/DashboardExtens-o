@@ -17,7 +17,7 @@
     <!-- Arquivos CSS -->
     <link rel="stylesheet" href="assets/css/containerRightPacient.css">
     <link rel="stylesheet" href="assets/css/containerLeftPacient.css">
-    <link rel="stylesheet" href="assets/css/main/mainTarefas.css"> <!-- main da tarefas -->
+    <link rel="stylesheet" href="assets/css/main/mainConfigurações.css"> <!-- main da tarefas -->
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,17 +174,89 @@
             <!-- ============= Project Main ============= -->
             <main>
                 <div class="projectCard">
-                    
+                    <!-- Settings Card Content -->
+                    <div class="settings-header">
+                        <h1 class="settings-title">Configurações</h1>
+                        <button class="save-button">
+                            <span class="material-symbols-outlined">save</span>
+                            Salvar as alterações
+                        </button>
+                    </div>
 
-                </div><!-- Fim da div ProjectCard -->
+                    <div class="settings-section">
+                        <h2 class="section-title">Modo do Tema</h2>
+                        <div class="theme-mode-options">
+                            <button class="theme-button active" data-theme="light">
+                                <span class="material-symbols-outlined theme-icon">light_mode</span>
+                                Claro
+                            </button>
+                            <button class="theme-button" data-theme="dark">
+                                <span class="material-symbols-outlined theme-icon">dark_mode</span>
+                                Escuro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h2 class="section-title">Tema de Fundo</h2>
+                        <div class="background-theme-options">
+                            <label class="background-option">
+                                <input type="radio" name="background-theme" value="purple" checked>
+                                <div class="color-box purple"></div>
+                                <span class="color-label">Principal (Atual)</span>
+                                <span class="active-tag">Ativo</span>
+                            </label>
+                            <label class="background-option">
+                                <input type="radio" name="background-theme" value="blue">
+                                <div class="color-box blue"></div>
+                                <span class="color-label">Azul</span>
+                                <span class="active-tag">Ativo</span>
+                            </label>
+                            <label class="background-option">
+                                <input type="radio" name="background-theme" value="green">
+                                <div class="color-box green"></div>
+                                <span class="color-label">Verde</span>
+                                <span class="active-tag">Ativo</span>
+                            </label>
+                            <label class="background-option">
+                                <input type="radio" name="background-theme" value="orange">
+                                <div class="color-box orange"></div>
+                                <span class="color-label">Laranja</span>
+                                <span class="active-tag">Ativo</span>
+                            </label>
+                            <label class="background-option">
+                                <input type="radio" name="background-theme" value="pink">
+                                <div class="color-box pink"></div>
+                                <span class="color-label">Rosa</span>
+                                <span class="active-tag">Ativo</span>
+                            </label>
+                            <label class="background-option">
+                                <input type="radio" name="background-theme" value="dark">
+                                <div class="color-box dark"></div>
+                                <span class="color-label">Roxo</span>
+                                <span class="active-tag">Ativo</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h2 class="section-title">Idioma</h2>
+                        <select id="language-select" class="language-select">
+                            <option value="pt-br">Português (Brasil)</option>
+                            <option value="en-us">English (US)</option>
+                            <option value="es-es">Español (España)</option>
+                        </select>
+                    </div>
+                </div>
             </main>
         </div><!-- Fim da div right-->
     </div><!-- Fim da div container -->
 
     <script src="assets/js/menu.js"></script>
-    
-    <!-- carregar web -->
     <script src="assets/js/carregarWeb.js"></script>
+    <script src="assets/js/configurações.js"></script>
+
+
 </body>
 
 </html>

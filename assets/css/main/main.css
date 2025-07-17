@@ -102,8 +102,7 @@
 
 @media (max-width: 927px) {
     .container {
-        height: 100%;
-        /* margin: 30px 0; */
+        margin: 10px 10px;
     }
 
     .container .left {
@@ -126,8 +125,6 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-
-    
 
     .container .right main {
         grid-template-columns: 1fr;
@@ -194,7 +191,7 @@
     .container {
         width: 100%;
         height: auto;
-        margin: 0;
+        
         padding: 0px 10px 10px;
         display: flex;
         flex-direction: column;
@@ -203,7 +200,6 @@
     
     .container .right {
         padding-top: 10px; /* espaço para o topo com ícones */
-        zoom: 100%;
         width: 100%;
     }
 

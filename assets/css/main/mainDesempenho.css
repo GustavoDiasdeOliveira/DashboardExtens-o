@@ -297,8 +297,7 @@
 
 @media (max-width: 927px) {
     .container {
-        height: 80%;
-        margin: 30px 0;
+        margin: 10px 10px;
     }
 
     .container .left.active {
@@ -446,7 +445,6 @@
     .container {
         width: 100%;
         height: auto;
-        margin: 0;
         padding: 0px 10px 10px;
         display: flex;
         flex-direction: column;

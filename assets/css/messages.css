@@ -195,7 +195,7 @@
 }
 
 .modal-content {
-  background-color: #ffffff; /* Fundo do modal branco */
+  background-color: #22223be6; /* Fundo do modal branco */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -219,11 +219,11 @@
 .modal-header h2 {
   margin: 0;
   font-size: 1.5em;
-  color: #333; /* Cor do título do modal */
+  color: #ffffff; /* Cor do título do modal */
 }
 
 .closeBtn {
-  color: #aaa;
+  color: #ffffff;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
@@ -231,7 +231,7 @@
 
 .closeBtn:hover,
 .closeBtn:focus {
-  color: black;
+  color: rgb(255, 0, 0);
   text-decoration: none;
 }
 
@@ -243,7 +243,7 @@
 
 .modal-body label {
   font-weight: 600;
-  color: #555; /* Cor do texto dos labels */
+  color: #ffffff; /* Cor do texto dos labels */
   margin-bottom: 5px;
 }
 
@@ -284,15 +284,6 @@
 
 .modal-footer button:first-child:hover {
   background-color: #bbb;
-}
-
-.modal-footer .btnSalvar {
-  background-color: #4caf50;
-  color: white;
-}
-
-.modal-footer .btnSalvar:hover {
-  background-color: #45a049;
 }
 
 /* Garante que o modal seja centralizado quando exibido */

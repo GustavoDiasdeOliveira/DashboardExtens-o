@@ -68,7 +68,6 @@
     display: flex;
     gap: 20px;
     overflow: hidden;
-    zoom: 96%;
 }
 
 .container .right main {

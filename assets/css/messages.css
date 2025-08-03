@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   /* Ajustado para comportar aproximadamente 4 itens e mostrar barra de rolagem para o 5º */
-  max-height: 260px; /* Valor ajustado para a altura do card */
+  max-height: 300px; /* Valor ajustado para a altura do card */
   background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(5px);
   border-radius: 20px;
